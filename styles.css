@@ -1,0 +1,764 @@
+@import "./reset.css";
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+    border-bottom: solid 1px rgb(224, 222, 222) ;
+    align-items: center;
+    height: 42px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 8%) 0 0 5px 1px;
+    z-index: 100;
+}
+
+#nav-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+    align-items: center;
+}
+
+#hamburger{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}
+
+.hamburger-layer{
+    width: 15px;
+    height: 2px;
+    margin: 2px;
+    background-color: #000000;
+}
+
+#magnify {
+ font-size: 20px; /* This controls the size. */
+ display: inline-block;
+ width: 0.4em;
+ height: 0.4em;
+ border: 0.1em solid #000000;
+ position: relative;
+ border-radius: 0.35em;
+}
+
+#magnify::before{
+ content: "";
+ display: inline-block;
+ position: absolute;
+ right: -0.35em;
+ bottom: -0.2em;
+ border-width: 0;
+ background: #000000;
+ width: 0.50em;
+ height: 0.13em;
+ -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+}
+
+svg{
+    fill: rgb(0, 0, 0);
+    width: 200px;
+}
+
+svg:not(:root){
+    overflow: hidden;
+}
+
+#category{
+    font-size: 14.25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    line-height: 19px;
+}
+
+.user-button{
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: ease 0.6s;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #567b95;
+    border: 1px solid #326891;
+    color: #fff;
+    font-size: 11px;
+    line-height: 11px;
+    font-weight: 700;
+    -webkit-letter-spacing: 0.05em;
+    -moz-letter-spacing: 0.05em;
+    -ms-letter-spacing: 0.05em;
+    letter-spacing: 0.05em;
+    padding: 11px 12px 8px;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.nav-NYT{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+}
+
+h2{
+    font-family: 'Domine', serif;
+    font-weight: 700;
+    width: 600px;
+    font-style: italic;
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    padding: 70px 0 20px 0;
+    color: #121212;
+    border-bottom: solid 1px rgb(224, 222, 222) ;
+}
+
+#social-nav{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 600px;
+}
+
+.social-icon{
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    width: 15px;
+    background-color: #eee;
+    border: 1px #eee solid;
+    border-radius: 100%;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.whatsapp-icon {
+    background-image: url(./assets/icon-whatsapp.svg);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.share-icon {
+    width: 27px;
+    height: 27px;
+}
+
+.share-arrow {
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+    width: 15px;
+    bottom: 5px;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    bottom: 1px;
+}
+
+.comment-icon {
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    bottom: 0.05rem;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    height: 25px;
+    line-height: 1rem;
+    margin-left: 2px;
+    min-width: 24px;
+    overflow: visible;
+    padding: 0px 0px 4px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.comment-icon-border {
+    -webkit-box-align: center;
+    align-items: center;
+    background: transparent;
+    border: 1px solid rgb(102, 102, 102);
+    border-radius: 4px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-width: 26px;
+    min-height: 14px;
+    padding: 4px;
+    position: relative;
+    width: auto;
+}
+
+.comment-icon-border::before {
+    border-color: rgb(102, 102, 102) transparent;
+    border-style: solid;
+    bottom: -7px;
+    border-width: 6px 0px 0px 8px;
+    content: "";
+    display: block;
+    left: 15px;
+    position: absolute;
+    width: 0px;
+}
+
+.comment-icon-border::after {
+    border-color: rgb(255, 255, 255) transparent;
+    border-style: solid;
+    border-width: 6px 0px 0px 6px;
+    bottom: -6px;
+    content: "";
+    display: block;
+    left: 16px;
+    position: absolute;
+    width: 0px;
+}
+
+.bookmark-icon{
+    width: fit-content;
+    height:fit-content;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+#main-image-wrapper{
+    width: 70%;
+}
+
+#main-article-image{
+    width: 100%;
+}
+
+.image-caption{
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    margin-right: 7px;
+    color: #666;
+    font-family: nyt-imperial,georgia,'times new roman',times,serif;
+}
+
+.image-credit{
+    font-size: 13px;
+    color: #888
+}
+
+.article-wrapper{
+    width: 50%;
+    margin-top: 40px;
+    color: #333;
+}
+
+.article-author{
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.article-date{
+    margin: 0 0 15px 0;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.article-paragraph{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.875rem;
+    margin: 0 0 15px 0;
+}
+
+.article-paragraph.bold{
+    font-weight: bold;
+}
+
+.line-divider{
+    height: 1px;
+    background-color: rgb(204, 204, 204);
+    color: #000;
+}
+
+.ad-line-divider{
+    width: 72px;
+}
+
+.nyt-ad{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 15px;
+}
+
+.nyt-link{
+    text-decoration: none;
+    color: rgb(50, 104, 145);
+}
+
+.narrow-margin {
+    margin: 15px 0 15px 0;
+}
+
+.editors-picks{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 1700px;
+    right: 40px;
+}
+/* need to do a media query when page is small to make this responsive*/
+
+.editors-article{
+    display: flex;
+    flex-direction: row;
+    margin: 7px 0 7px 0;
+}
+
+.editors-line-divider{
+    width: 160px;
+    margin: 10px 0 10px 0;
+}
+
+.editor-img{
+    width: 75px;
+    height: 75px;
+    margin: 0;
+}
+
+.editor-text{
+    font-family: 'Domine', serif;
+    font-size: 14px;
+    margin: 5px 0px 5px 10px;
+    width: 140px;
+}
+
+#inflation-wrapper{
+    width: 946px;
+    position: relative;
+}
+
+#inflation-title{
+    font-family: 'Domine', serif;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 7px;
+}
+
+#inflation-subtitle{
+    font-family: 'Domine', serif;
+    font-size: 13px;
+    color: #666;
+    line-height: 20px;
+}
+
+#inflation-img{
+    width: 946px;
+    margin-top: 20px;
+}
+
+.inflation-item{
+    position: absolute;
+    width: 228px;
+    font-size: 13px;
+    font-family:  Arial, sans-serif;
+    line-height: 17px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-top: 70px;
+}
+
+.inflation-item-bottom{
+    margin-top: 0;
+}
+
+#inflation-item-1{
+    top: 21.8264%;
+    left: 0.0436%;
+}
+
+#inflation-item-2{
+    top: 21.8264%;
+    left: 25.5619%;
+}
+
+#inflation-item-3{
+    top: 21.8264%;
+    left: 51.0800%;
+}
+
+#inflation-item-4{
+    top: 21.8264%;
+    left: 76.5982%;
+}
+
+#inflation-item-5{
+    top: 71.4375%;
+    left: 0.0436%;
+}
+
+#inflation-item-6{
+    top: 71.4375%;
+    left: 25.5619%;
+}
+
+#inflation-item-7{
+    top: 71.4375%;
+    left: 51.0800%;
+}
+
+#inflation-item-8{
+    top: 71.4375%;
+    left: 76.5982%;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.inflation-line-divider{
+    width: 72px;
+    background-color: #000;
+    margin: 40px 0 20px 0;
+}
+
+#inflation-author{
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.video-wrapper{
+    margin: 50px 0 60px 0;
+    width: 616px;
+    height: 346.5px;
+}
+
+.article-video{
+    width: 100%;
+    height: 100%;
+}
+
+.article-sub-image{
+    width: 100%;
+}
+
+.article-sub-image-wrapper{
+    margin: 30px 0 30px 0;
+}
+
+.disclaimer{
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    margin: 20px 0 10px 0;
+    color: #666;
+}
+
+#read-comments{
+    width: 330px;
+    height: 35px;
+    font-size: 13px;
+}
+
+#article-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+#social-footer{
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: fit-content;
+}
+
+#bottom-articles-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    flex-wrap: wrap;
+}
+
+#bottom-articles-left{
+    width: 66.5vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#bottom-articles-right{
+    width: 27.5vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.articles-left-wrapper{
+    width: 95%;
+    height: fit-content;
+    border-top: solid black 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 20px;
+}
+
+.article-left-item{
+    border: 1px solid rgb(204, 204, 204);
+    height: 300px;
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 15px
+}
+
+.last-article-item{
+    margin-right: 0;
+}
+
+.articles-heading{
+    padding: 15px 0 15px 5px;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dont-show{
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    padding: 0 0 0 0;
+}
+
+.article-item-header{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.sub-article-image{
+    width: 90px;
+}
+
+.add-article-wrapper {
+    background-color: rgb(255, 255, 255);
+    width: 35px;
+    height: 35px;
+}
+
+.add-article {
+    width: 35px;
+    height: 35px;
+}
+
+circle {
+    cx: 18;
+    cy: 18;
+    r: 17;
+    stroke: rgb(18, 18, 18);
+    fill: rgb(255, 255, 255);
+    stroke-width: 1.5;
+}
+
+line {
+    stroke-width: 2;
+    stroke: rgb(18, 18, 18);
+}
+
+.article-left-text{
+    padding: 0 12px 0 12px;
+    line-height: 19px;
+}
+
+.article-item-timing{
+    color: #666;
+    font-size: 11px;
+}
+
+.article-item-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.article-item-description{
+    color: #666;
+    height: 120px;
+}
+
+.see-latest{
+    color: #326891;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.left-photo-item{
+    height: fit-content;
+    padding: 5px 0 30px 0;
+    width: 31%;
+    margin-right: 15px;
+}
+
+.left-photo-img{
+    width: 100%
+}
+
+.photo-item-text-wrap{
+    width: 100%;
+    padding: 5px 0 0 0;
+    font-family: 'Domine', serif;
+}
+
+.last-photo-item{
+    border: 0;
+    margin-right: 0px;
+    padding-right: 0px
+}
+
+.photo-item-credit{
+    text-align: right;
+    color: #999;
+    font-size: 10px;
+}
+
+.photo-item-caption{
+    font-size: 16px;
+    margin: 8px 0 8px 0;
+    line-height: 22px;
+}
+
+.photo-item-date{
+    font-family:Arial, Helvetica, sans-serif;
+    color: #999;
+    font-size: 12px;
+}
+
+#articles-right-wrapper{
+    width: 93%;
+    height: 300px;
+    border-top: solid black 1px;
+}
+.article-right-headline{
+    border-top: 1px solid rgb(204, 204, 204);
+    font-family: 'Domine', serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 22px;
+    padding: 15px 5px 15px 5px;
+}
+
+.double-line-divider{
+    height: 1.5px;
+    width: 100%;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+    margin-bottom: 10px;
+}
+
+.footer-links-wrapper{
+    width: 94vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+#foot-nyt{
+    min-width: 88%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#home-page{
+    min-width: 10%;
+    font-size: 12px;
+    color: #326891;
+    flex-shrink: 0;
+}
+
+.footer-link-col{
+    width: 14%;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.end-footer-link-col{
+    width: 16%;
+    border-left: 1px solid rgb(224, 222, 222) ;
+    padding-left: 18px;
+}
+
+.footer-line-divider{
+    width: 160px;
+    margin: 10px 0 10px 0;
+    background-color: rgb(224, 222, 222) ;;
+}
+
+.footer-link-col-larger{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-link-col-small{
+    font-size: 11px;
+}
+
+.footer-link-icon {
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    margin-right: 7px;
+    vertical-align: middle;
+}
+
+.footer-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 11px;
+    padding: 15px 0 30px 0;
+    min-width: 90%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+    cursor: pointer;
+}
