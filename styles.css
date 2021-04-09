@@ -5,14 +5,18 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     width: 100vw;
-    border-bottom: solid 1px rgb(224, 222, 222) ;
+    border-bottom: solid 1px #e2e2e2 ;
     align-items: center;
     height: 42px;
     position: fixed;
     top: 0;
     background-color: white;
-    box-shadow: rgb(0 0 0 / 8%) 0 0 5px 1px;
+    box-shadow: rgb(0 0 0 / 1%) 0 0 5px 1px;
     z-index: 100;
+}
+
+#sub-nav{
+    display: none;
 }
 
 #nav-menu{
@@ -26,7 +30,7 @@ nav{
 #hamburger{
     width: fit-content;
     height: fit-content;
-    padding: 5px;
+    padding: 5px 5px 5px 18px;
 }
 
 .hamburger-layer{
@@ -102,6 +106,14 @@ svg:not(:root){
     margin: 5px;
 }
 
+#nav-user{
+    margin-right: 18px;
+}
+
+#user-icon{
+    display: none;
+}
+
 .nav-NYT{
     display: flex;
     align-items: center;
@@ -113,6 +125,7 @@ main{
     flex-direction: column;
     width: 100vw;
     align-items: center;
+    margin-top: 40px;
 }
 
 h2{
@@ -133,6 +146,7 @@ h2{
     align-items: center;
     height: 70px;
     width: 600px;
+    margin-bottom: 10px;
 }
 
 .social-icon{
@@ -246,7 +260,7 @@ h2{
 }
 
 #main-image-wrapper{
-    width: 70%;
+    width: 85%;
 }
 
 #main-article-image{
@@ -267,7 +281,7 @@ h2{
 }
 
 .article-wrapper{
-    width: 50%;
+    width: 45%;
     margin-top: 40px;
     color: #333;
 }
@@ -276,12 +290,16 @@ h2{
     margin: 0 0 15px 0;
     font-size: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 5px;
 }
 
 .article-date{
     margin: 0 0 15px 0;
     font-size: 13px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 97%;
+    padding-bottom: 45px;
+    border-bottom: solid 1px rgb(224, 222, 222) ;
 }
 
 .article-paragraph{
@@ -329,7 +347,6 @@ h2{
     top: 1700px;
     right: 40px;
 }
-/* need to do a media query when page is small to make this responsive*/
 
 .editors-article{
     display: flex;
@@ -706,10 +723,13 @@ line {
     justify-content: flex-start;
 }
 
-#home-page{
-    min-width: 10%;
+.blue-text-link{
     font-size: 12px;
     color: #326891;
+}
+
+#home-page{
+    min-width: 10%;
     flex-shrink: 0;
 }
 
@@ -754,6 +774,7 @@ line {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
     font-size: 11px;
     padding: 15px 0 30px 0;
@@ -761,4 +782,211 @@ line {
     font-family: Arial, Helvetica, sans-serif;
     color: #666;
     cursor: pointer;
+}
+
+.copyright{
+    width: 20%;
+}
+
+.footer-nav-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+}
+
+
+@media(max-width: 1150px){
+
+    .articles-left-wrapper-1{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .article-left-item{
+        height: 100px;
+        width: 100%;
+        flex-direction: row;
+        margin: 0 0 15px 0;
+        align-items: center;
+        padding: 10px 0 10px 0;
+    }
+
+    .article-left-text{
+        padding: 0;
+    }
+
+    .article-item-description{
+        color: #666;
+        height: auto;
+    }
+
+    .add-article-wrapper {
+        display: none;
+    }
+
+    .double-line-divider{
+        width: 100vw;
+    }
+
+    .footer-links{
+        display:none;
+    }
+
+    .footer-links-wrapper-end{
+        flex-direction: column;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .footer-link-col{
+        padding: 10px 0 10px 0;
+        border-bottom: solid 1px #e2e2e2;
+        width: 100%;
+        
+    }
+
+    #home-page{
+        position: sticky;
+        bottom: 0;
+        width: fit-content;
+    }
+
+    .footer-nav{
+        flex-direction: column;
+        padding-top: 10px;
+        align-items: center;
+    }
+
+    .copyright{
+        margin-bottom: 20px;
+        width: fit-content
+    }
+
+    .footer-nav-links{
+        padding-bottom: 20px;
+        justify-content: center;
+
+    }
+
+    .footer-nav-link{
+        padding: 0 10px 0 10px;
+    }
+}
+
+@media(max-width: 1024px){
+    nav{
+        height: 52px;
+    }
+
+    #magnify-wrapper{
+        display: none;
+    }
+
+    #category{
+        display: none;
+    }
+
+    .nav-user-button{
+        display: none;
+    }
+
+    #nav-menu{
+        width: fit-content;
+    }
+
+    #user-icon{
+        display: block;
+       background: url(./assets/person-fill.svg) no-repeat;
+       background-size: cover;
+       width: 20px;
+       height: 20px;
+       color: #000;
+
+    }
+
+    #sub-nav{
+        display: flex;
+        width: fit-content;
+        position: absolute;
+        top: 53px;
+        right: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 8px 16px 0 0;
+    }
+
+    .blue-text-link, .vertical-line{
+        font-size: 10px;
+        padding-left: 8px;
+
+    }
+
+    .vertical-line{
+        color: #e2e2e2 ;
+    }
+
+    main{
+        margin-top: 20px;
+    }
+
+    .nav-NYT{
+        height: 100%;
+    }
+    .nyt-logo{
+        height: 30.6px;
+        width: 225px;
+        padding-top: 8px;
+    }
+
+    .article-wrapper{
+        width: 60%;
+    }
+
+    .article-date{
+        width: 100%;
+    }
+
+    .editors-picks{
+        display: none;
+    }
+}
+
+@media(max-width: 740px){
+
+    h2{
+        width: 80%;
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+
+    #main-image-wrapper{
+        width: 100%;
+    }
+
+    .image-caption{
+        width: 94%;
+        padding: 0 3% 0 3%;
+    }
+
+    .article-wrapper{
+        width: 80%;
+    }
+
+    .article-paragraph{
+        font-size: 18px;
+        line-height: 1.6rem;
+    }
+
+    #bottom-articles-wrapper{
+        width: 95vw;
+    }
+    
+    #bottom-articles-right{
+        display: none;
+    }
+
+    #bottom-articles-left{
+        width: 100%;
+    }
 }
